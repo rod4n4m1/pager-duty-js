@@ -1,0 +1,35 @@
+{
+  "name": "pager-duty-js",
+  "version": "0.1.4",
+  "description": "PagerDuty API Client",
+  "main": "app.js",
+  "scripts": {
+    "test:abilities": "bash -c 'source tests/process.env && jest tests/Abilities.test.js'",
+    "test:users": "bash -c 'source tests/process.env && jest tests/Users.test.js'",
+    "test:teams": "bash -c 'source tests/process.env && jest tests/Teams.test.js'",
+    "test:alert": "bash -c 'source tests/process.env && jest tests/Alert.test.js'"
+  },
+  "keywords": [
+    "kyndryl",
+    "pagerduty",
+    "nodejs",
+    "promises",
+    "api",
+    "async"
+  ],
+  "author": "Rod Anami <rod.anami@kyndryl.com> (https://github.com/rod4n4m1)",
+  "license": "EPL-2.0",
+  "dependencies": {
+    "axios": "^0.27.2"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "devDependencies": {
+    "jest": "^27.4.7",
+    "random-words": "^1.2.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
