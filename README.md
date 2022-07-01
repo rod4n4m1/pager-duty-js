@@ -137,10 +137,28 @@ const pd = new PagerDuty( {
 
 ### Code Sniplets
 
-Check abilities for a given API Token:
+* Check abilities for a given Rest API Token:
 
 ```javascript
-const status = await pd.getAbilities(token);
+const status = await pd.listAbilities(token);
+```
+
+* Create a new user through the Rest API:
+
+```javascript
+const status = await pd.createUser(token, data, requesterEmail);
+```
+
+* List alls teams through the Rest API:
+
+```javascript
+const status = await pd.listTeams(token, params);
+```
+
+* Trigger an alert through the Events API:
+
+```javascript
+const status = await pd.triggerEventAlert(integrationKey, data);
 ```
 
 
@@ -170,7 +188,7 @@ catch(err) {
 
 Check below docs for more information on specific function groups.
 
-## List of functions available
+## List of available functions
 
 ### Rest API
 

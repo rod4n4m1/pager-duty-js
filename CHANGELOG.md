@@ -3,7 +3,9 @@
 ## Change Log
 
 * `0.1.5`
-  * Added ``
+  * Added `sendChangeEvent` function
+  * Expanded documentation
+  * Added GitHub templates
 
 * `0.1.4`
   * Minimum viable product
