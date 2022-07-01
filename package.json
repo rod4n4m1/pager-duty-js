@@ -1,13 +1,14 @@
 {
   "name": "pager-duty-js",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "PagerDuty API Client",
   "main": "app.js",
   "scripts": {
     "test:abilities": "bash -c 'source tests/process.env && jest tests/Abilities.test.js'",
     "test:users": "bash -c 'source tests/process.env && jest tests/Users.test.js'",
     "test:teams": "bash -c 'source tests/process.env && jest tests/Teams.test.js'",
-    "test:alert": "bash -c 'source tests/process.env && jest tests/Alert.test.js'"
+    "test:alert": "bash -c 'source tests/process.env && jest tests/Alert.test.js'",
+    "test:change": "bash -c 'source tests/process.env && jest tests/Change.test.js'"
   },
   "keywords": [
     "kyndryl",

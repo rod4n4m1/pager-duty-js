@@ -389,6 +389,37 @@ class PagerDuty {
     }
   }
 
+  /**
+  * @param {String<required>} integrationKey
+  * @param {Object<required>} data
+  * @returns {Promise<Object>}
+  */
+  async sendChangeEvent(integrationKey, data){
+    assert(integrationKey, 'acknowledgeEventAlert: required parameter missing - API Integration key');
+
+    let rootPath = "";
+    if (this.rootPath) {
+      rootPath = this.rootPath;
+    } else {
+      rootPath = config.changeRootPath;
+    }
+    data.routing_key = integrationKey;
+    //console.log(queryString);
+    const Options = {
+      url: `${rootPath}`,
+      method: config.eventAPIMethod,
+      data: data
+    };
+
+    try {
+      const response = await this.instance(Options);
+      return parseAxiosResponse(response);
+    } catch(err) {
+      console.error(err.response.data);
+      throw parseAxiosError(err);
+    }
+  }
+
 };
 
 module.exports = PagerDuty;

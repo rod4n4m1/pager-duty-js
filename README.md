@@ -68,6 +68,8 @@ This module provides a set of functions to help **JavaScript** Developers workin
 
 ### Rest API
 
+* PagerDuty API [reference](https://developer.pagerduty.com/api-reference)
+
 **Production**
 
 ```javascript
@@ -184,14 +186,17 @@ Check below docs for more information on specific function groups.
 | **Group** | **Link** |
 |:---------------------------------------|:--------------:|
 | Alert | [Doc](./docs/Alert.md) |
-| Change | TBD |
+| Change | [Doc](./docs/Change.md) |
 |  |  |
 
 
 ## Coverage and Limitations
 
+### API rate limiting
 
-### Rest API
+* Check the PagerDuty API rate limits [here](https://developer.pagerduty.com/docs/ZG9jOjExMDI5NTUz-rate-limiting)
+
+### Rest API Coverage
 
 The following PagerDuty API groups are currently covered:
 
@@ -199,13 +204,14 @@ The following PagerDuty API groups are currently covered:
 * Teams (Partially)
 * Users (Partially)
 
-### Events API
+### Events API Coverage
 
-* Alert (Partially)
+* Alert (Full)
   * trigger
   * acknowledge
   * resolve
-* Change (not yet implemented)
+* Change (Full)
+  * send
 
 
 ### Creating your developer account on PagerDuty
